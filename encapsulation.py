@@ -46,12 +46,9 @@ print(f"Album: {my_song.album}")
 print(f"Duration (formatted): {my_song.get_duration_formatted()}") # Accessing private attribute via getter
 print(f"Duration (in seconds): {my_song.get_duration_in_seconds()}")
 
-# Attempting to access the private attribute directly (will not work as expected due to name mangling)
-# print(my_song.__duration_seconds) # This would raise an AttributeError or access the mangled name, which is not recommended
 
-# Modifying the duration using the setter method
 my_song.set_duration(6, 10)
 print(f"New duration (formatted): {my_song.get_duration_formatted()}")
 
-# Attempting to set an invalid duration
+
 my_song.set_duration(-1, 30)
