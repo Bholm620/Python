@@ -9,9 +9,9 @@ class music(ABC):
             pass
 
 class guitar(music):
-    def hollowbody(self, instrument):
-        print("The blues sounds good on the {} because it's a ".format(amount))
+    def accompaniment(self, instrument):
+        print("The blues also sounds good on the {} because it's sad ".format(amount))
 
 obj = hollowbody()
 obj.blues("guitar")
-obj.style("sad")
+obj.accompaniment("trumpet")
