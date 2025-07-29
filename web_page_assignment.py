@@ -3,17 +3,21 @@ from tkinter import ttk
 import webbrowser
 import os
 
+#Creates webpage generator
 class ParentWindow:
     def __init__(self, master):
         self.master = master
         master.title("Custom Web Page Generator")
 
+        #creates custom button
         self.label = ttk.Label(master, text="Enter custom text or leave blank for default:")
         self.label.grid(pady=10)
-       
+
+        #creates entry field
         self.text_entry = ttk.Entry(master, width=50)
         self.text_entry.grid(pady=5)
 
+        #cerates generate button
         self.generate_button = ttk.Button(master, text="Generate and Open Page", command=self.generate_and_open_page)
         self.generate_button.grid(row=4, column=0, pady=10)
 
@@ -22,7 +26,7 @@ class ParentWindow:
 
 
         
-
+    #genterates default text
     def generate_and_open_page(self):
         user_text = self.text_entry.get()
         if not user_text:
